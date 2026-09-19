@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostelFit - Personal Fitness & Diet Plan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-bolt"></i> HostelFit
+            </div>
+            <p class="subtitle">Your 2-Month Journey to -4kg Begins Here</p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-target="profile"><i class="fa-solid fa-user"></i> Profile</button>
+            <button class="tab-btn" data-target="workouts"><i class="fa-solid fa-dumbbell"></i> Workouts</button>
+            <button class="tab-btn" data-target="meals"><i class="fa-solid fa-utensils"></i> Meals</button>
+            <button class="tab-btn" data-target="essentials"><i class="fa-solid fa-droplet"></i> Essentials</button>
+        </nav>
+
+        <main class="content-area">
+            <!-- PROFILE SECTION -->
+            <section id="profile" class="tab-content active">
+                <div class="section-header-flex">
+                    <h2 class="section-title">Your Profile</h2>
+                    <button id="edit-profile-btn" class="edit-btn"><i class="fa-solid fa-pen"></i> Edit</button>
+                </div>
+                <div class="profile-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Goal</span>
+                            <span class="stat-value" id="val-goal">Weight Loss</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-weight-scale"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Current Weight</span>
+                            <span class="stat-value" id="val-weight">68 kg</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Diet</span>
+                            <span class="stat-value" id="val-diet">Vegetarian</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Daily Budget</span>
+                            <span class="stat-value" id="val-budget">₹100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card mt-4">
+                    <h3><i class="fa-solid fa-circle-info"></i> Context</h3>
+                    <ul class="info-list">
+                        <li><strong>Environment:</strong> <span id="val-environment">Hostel room + open ground (No
+                                gym)</span></li>
+                        <li><strong>Schedule:</strong> <span id="val-schedule">Classes 9 AM - 5 PM (Mon-Fri)</span></li>
+                        <li><strong>Workout Time:</strong> <span id="val-workout-time">45 mins in the mornings</span>
+                        </li>
+                        <li><strong>Food Source:</strong> <span id="val-food-source">Hostel mess for lunch/dinner</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- WORKOUTS SECTION -->
+            <section id="workouts" class="tab-content">
+                <h2 class="section-title">Weekly Workout Plan</h2>
+                <p class="section-desc">Always start with a 5-minute warm-up and end with a 5-minute cooldown.</p>
+
+                <div class="days-container">
+                    <!-- Cards will be populated by JS -->
+                </div>
+            </section>
+
+            <!-- MEALS SECTION -->
+            <section id="meals" class="tab-content">
+                <h2 class="section-title">Weekly Meal Plan</h2>
+                <div class="calorie-badge">~1700 - 1800 kcal / day</div>
+                <p class="section-desc">Focus on portion control. Fill half your plate with salad/veggies.</p>
+
+                <div class="meals-container">
+                    <!-- Cards will be populated by JS -->
+                </div>
+
+                <div class="info-card mt-4">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Mess Tip</h3>
+                    <p>Always fill half your plate with salad/veggies, one-quarter with dal/protein, and one-quarter
+                        with carbs like rice or roti. Skip the mess desserts!</p>
+                </div>
+            </section>
+
+            <!-- ESSENTIALS SECTION -->
+            <section id="essentials" class="tab-content">
+                <h2 class="section-title">Daily Essentials & Targets</h2>
+
+                <div class="essentials-grid">
+                    <div class="essential-card glass">
+                        <div class="icon-circle water"><i class="fa-solid fa-glass-water"></i></div>
+                        <h3>Hydration</h3>
+                        <p class="highlight">3 - 3.5 Liters</p>
+                        <p class="subtext">Carry a water bottle to your classes 9 to 5.</p>
+                    </div>
+
+                    <div class="essential-card glass">
+                        <div class="icon-circle sleep"><i class="fa-solid fa-moon"></i></div>
+                        <h3>Sleep</h3>
+                        <p class="highlight">7 - 8 Hours</p>
+                        <p class="subtext">Try to sleep by 11:30 PM for easy morning wake-ups.</p>
+                    </div>
+
+                    <div class="essential-card glass">
+                        <div class="icon-circle tip"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <h3>Shopping Tip</h3>
+                        <p class="subtext">Buy peanut butter, roasted chana, and fruits on Sunday to sort your ₹700/week
+                            budget.</p>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title mt-5">This Week's Targets</h3>
+                <div class="targets-list">
+                    <label class="target-item">
+                        <input type="checkbox" class="target-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="target-text">Complete at least 5 out of 6 scheduled workouts</span>
+                    </label>
+                    <label class="target-item">
+                        <input type="checkbox" class="target-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="target-text">Drink at least 3 liters of water every single day</span>
+                    </label>
+                    <label class="target-item">
+                        <input type="checkbox" class="target-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="target-text">Completely avoid outside junk food and sugary drinks</span>
+                    </label>
+                </div>
+
+                <div class="disclaimer mt-5">
+                    <strong>⚠️ Important Disclaimer:</strong> This plan is for general wellness purposes only and is not
+                    a substitute for advice from a doctor, registered dietitian, or certified fitness trainer.
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- EDIT PROFILE MODAL -->
+    <div id="edit-modal" class="modal-overlay">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button id="close-modal-btn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form id="edit-profile-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Goal</label>
+                        <input type="text" id="input-goal" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Current Weight</label>
+                        <input type="text" id="input-weight" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Diet</label>
+                        <input type="text" id="input-diet" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Daily Budget</label>
+                        <input type="text" id="input-budget" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Environment</label>
+                        <input type="text" id="input-environment" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Schedule</label>
+                        <input type="text" id="input-schedule" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Workout Time</label>
+                        <input type="text" id="input-workout-time" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Food Source</label>
+                        <input type="text" id="input-food-source" required>
+                    </div>
+                </div>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CHATBOT -->
+    <button id="chatbot-toggler" class="chatbot-toggler">
+        <i class="fa-solid fa-message"></i>
+    </button>
+
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chat-header">
+            <h3><i class="fa-solid fa-robot"></i> FitBot</h3>
+            <button id="chat-close-btn" class="chat-close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="chat-body" class="chat-body">
+            <div class="message bot">
+                Hi there! I'm FitBot. I can help you with diet or workout tips. What's on your mind?
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type a message..." autocomplete="off">
+            <button id="chat-send-btn" class="chat-send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
